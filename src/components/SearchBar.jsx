@@ -5,11 +5,11 @@ import { searchPhotos } from '../api'
 const SearchBar = ({functionSearchParent}) => {
     const [term, setTerm] = useState('')
     const handleChange = (e) => { 
-        setTerm(e.target.value)
+        setTerm(e.target.value) // cập nhật giá trị cho state term
     }
     const handleSubmit = (e) => {
-        e.preventDefault()
-        functionSearchParent(term)
+        e.preventDefault() // ko làm mới lại trang
+        functionSearchParent(term) //sử lí kết quả dựa vào dữ liệu ô tìm kiếm
      
     }
   return (
